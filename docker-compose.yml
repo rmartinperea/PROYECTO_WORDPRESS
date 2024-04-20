@@ -7,16 +7,18 @@ services:
       DB_NAME: wordpress
       DB_USER: wordpress
       DB_PASSWORD: wordpress
- 
+    ports:
+    - 8080:80
     volumes:
       - wordpress_data:/var/www/html
-      - ./mis-plugins/amp/:/var/www/html/wp-content/plugins/amp
-      - ./mis-plugins/classic-editor/:/var/www/html/wp-content/plugins/classic-editor
-      - ./mis-plugins/coblocks/:/var/www/html/wp-content/plugins/coblocks
-      - ./mis-plugins/contact-form-7/:/var/www/html/wp-content/plugins/contact-form-7
-      - ./mis-plugins/google-site-kit/:/var/www/html/wp-content/plugins/google-site-kit
-      - ./mis-temas/generatepress/:/var/www/html/wp-content/themes/generatepress
-      - ./mis-temas/twentytwelve/:/var/www/html/wp-content/themes/twentytwelve
+      - C:\Users\ruben\Documents\plugins\woocommerce:/var/www/html/wp-content/plugins/woocommerce
+      - C:\Users\ruben\Documents\plugins\elementor:/var/www/html/wp-content/plugins/Elementor
+      - C:\Users\ruben\Documents\plugins\elementor_pro:/var/www/html/wp-content/plugins/elementor_pro
+      - C:\Users\ruben\Documents\plugins\woocommerce_payment:/var/www/html/wp-content/plugins/woocommerce_payment
+      - C:\Users\ruben\Documents\plugins\yoast-seo:/var/www/html/wp-content/plugins/yoast-seo
+      - C:\Users\ruben\Documents\plugins\litespeed-cache:/var/www/html/wp-content/plugins/litespeed-cache
+      - C:\Users\ruben\Documents\themes\tienda_plantas:/var/www/html/wp-content/themes/tienda_plantas
+
     depends_on:
       - db
 
